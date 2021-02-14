@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="m-2"><h4>myapp</h4></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'myapp_Pizzas_list' %}">Pizzas Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'myapp_Toppings_list' %}">Toppings Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'myapp_Drinks_list' %}">Drinks Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'myapp_Order_list' %}">Order Listing</a></div>
+{% endblock %}
