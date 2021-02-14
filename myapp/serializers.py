@@ -4,43 +4,40 @@ from . import models
 
 
 class PizzasSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = models.Pizzas
         fields = [
+            "name",
             "crust",
             "price",
-            "created",
-            "last_updated",
         ]
+
 
 class ToppingsSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = models.Toppings
-        fields = [
-            "name",
-            "created",
-            "last_updated",
-        ]
+        fields = ["name", "created"]
+
 
 class DrinksSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = models.Drinks
         fields = [
-            "price",
-            "created",
-            "last_updated",
             "name",
+            "price",
         ]
 
-class OrderSerializer(serializers.ModelSerializer):
 
+class OrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Order
         fields = [
             "created",
             "bill",
-            "last_updated",
         ]
+
+
+class CrustSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Crust
+        fields = ["name"]

@@ -34,3 +34,10 @@ class OrderViewSet(viewsets.ModelViewSet):
     queryset = models.Order.objects.all()
     serializer_class = serializers.OrderSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+class CrustViewSet(viewsets.ModelViewSet):
+    """ViewSet for the Crust class"""
+
+    queryset = models.Crust.objects.all()
+    serializer_class = serializers.CrustSerializer
+    permission_classes = [permissions.IsAuthenticated]

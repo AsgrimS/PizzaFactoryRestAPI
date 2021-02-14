@@ -10,6 +10,7 @@ router.register("Pizzas", api.PizzasViewSet)
 router.register("Toppings", api.ToppingsViewSet)
 router.register("Drinks", api.DrinksViewSet)
 router.register("Order", api.OrderViewSet)
+router.register("Crust", api.CrustViewSet)
 
 urlpatterns = (
     path("api/v1/", include(router.urls)),
